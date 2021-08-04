@@ -5,3 +5,24 @@ const Employee = require('./lib/employee');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const Manager = require('./lib/manager');
+let engineerArr = [];
+let managerArr = [];
+let internArr = [];
+let employeeArr = {engineerArr, managerArr, internArr};
+function promptUser(){
+    return inquirer
+    .prompt([
+        {
+            type: 'text',
+            name: 'employee',
+            message: "What is the workers's name? (Required!)",
+            validate: employeeInput => {
+                if (employeeInput) {
+                    return true;
+                }
+             else {
+                    console.log ("Please enter the workers's name.");
+                    return false;
+                }
+            }
+        },

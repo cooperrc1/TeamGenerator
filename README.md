@@ -29,7 +29,7 @@ How does one go about using it?
 
 
 ## Contributors 👪
-* None.
+Cooper Cutbirth
 
 
 ## Contact ✉️

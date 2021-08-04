@@ -26,3 +26,15 @@ function promptUser(){
                 }
             }
         },
+promptUser()
+    .then(eD => {
+        return generatePage(employeeArr)
+    })
+    .then (htmlFile =>{
+        fs.writeFile('./dist/index.html', htmlFile, err=> {
+            console.log('File was successfully created.')
+            if(err){
+                return;
+            }
+        })
+    })
